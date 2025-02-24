@@ -8,9 +8,12 @@ function makeGrid(squares) {
             let squareDiv = document.createElement("div");
             squareDiv.className = "squareDiv";
             row.appendChild(squareDiv);
-            //console.log(squareDiv);
             squareDiv.addEventListener("mouseenter", () => {
-                squareDiv.style.backgroundColor = "black";
+                //squareDiv.style.backgroundColor = "black";
+                let red = Math.floor(Math.random() * 255);
+                let green = Math.floor(Math.random() * 255);
+                let blue = Math.floor(Math.random() * 255);
+                squareDiv.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
             });
         }
         row.className = "row";
